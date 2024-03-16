@@ -1,0 +1,30 @@
+{
+  "defaultEnv": { "ENV": "NODE_ENV" },
+  "development": {
+    "driver": "pg",
+    "username": { "ENV": "POSTGRES_USER" },
+    "password": { "ENV": "POSTGRES_PASSWORD" },
+    "database": { "ENV": "POSTGRES_DB" },
+    "host": { "ENV": "POSTGRES_HOST" },
+    "port": { "ENV": "POSTGRES_PORT" },
+    "dialect": "postgres"
+  },
+  "test": {
+    "driver": "pg",
+    "username": { "ENV": "POSTGRES_USER" },
+    "password": { "ENV": "POSTGRES_PASSWORD" },
+    "database": { "ENV": "POSTGRES_DB_TEST" },
+    "host": { "ENV": "POSTGRES_HOST" },
+    "port": { "ENV": "POSTGRES_PORT" },
+    "dialect": "postgres"
+  },
+  "production": {
+    "driver": "pg",
+    "username": { "ENV": "POSTGRES_USER" },
+    "password": { "ENV": "POSTGRES_PASSWORD" },
+    "database": { "ENV": "POSTGRES_DB" },
+    "host": { "ENV": "POSTGRES_HOST" },
+    "port": { "ENV": "POSTGRES_PORT" },
+    "dialect": "postgres"
+  }
+}
