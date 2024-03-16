@@ -3,7 +3,7 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import RateLimit from 'express-rate-limit';
-import errorMiddleware from './middlewares/error_middleware';
+import errorMiddleware from './middlewares/error-middleware';
 import config from './config';
 import User from './models/users';
 import Todo from './models/todos';
