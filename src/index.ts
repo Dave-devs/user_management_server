@@ -2,6 +2,7 @@
 import express, { Application } from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
+import cors from 'cors';
 import RateLimit from 'express-rate-limit';
 import errorMiddleware from './middlewares/error-middleware';
 import config from './config';
@@ -13,8 +14,13 @@ import todoRouter from './routes/todos';
 
 // Package Initializations
 const app: Application  = express();
+const corsOptions = {
+    origin: 'http://localhost:3000',
+}
 // Middelwares
+app.use(cors(corsOptions));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(errorMiddleware);
 app.use(morgan('common'));
 app.use(helmet());
